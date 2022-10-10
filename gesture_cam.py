@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 from tensorflow.keras import models
 
 camera = cv2.VideoCapture(0)
+cv.flip(frame, 0)
 
 # check camera resolution
 (_, frame) = camera.read()
