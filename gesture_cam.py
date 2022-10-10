@@ -5,11 +5,12 @@ import matplotlib.pyplot as plt
 
 from tensorflow.keras import models
 
-camera0 = cv2.VideoCapture(0)
-camera = cv2.flip(camera0, 0)
+camera = cv2.VideoCapture(0)
 
 # check camera resolution
 (_, frame) = camera.read()
+frame = cv2.flip(frame, 0)
+
 (height, width, channel) = frame.shape
 print(width, height)
 
